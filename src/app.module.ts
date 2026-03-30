@@ -7,6 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AssignmentModule } from './assignment/assignment.module';
 import { SubmissionModule } from './submission/submission.module';
+import { CourseModule } from './course/course.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { SubmissionModule } from './submission/submission.module';
     UserModule,
     AssignmentModule,
     SubmissionModule,
+    CourseModule,
   ],
   controllers: [AppController],
   providers: [AppService],

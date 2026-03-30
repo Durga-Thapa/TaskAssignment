@@ -31,7 +31,9 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(process.env.PORT ?? 2000);
+  // await app.listen(process.env.PORT ?? 2000);
+  const port = process.env.PORT || 2000;
+  await app.listen(port, '0.0.0.0');
   console.log(await app.getUrl());
 }
 bootstrap();
